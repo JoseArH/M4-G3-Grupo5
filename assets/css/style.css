@@ -1,0 +1,75 @@
+body{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-image: url('../css/img/aduana.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.titulo{
+    color: rgb(255, 255, 255);
+}
+
+.resumen{
+    background-color: rgba(255, 255, 255, 0.7); 
+    backdrop-filter: blur(10px);
+    border-radius: 10px
+}
+
+form{
+    background: #ffffff62;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgb(21, 21, 21, 0.1);
+    width: 500px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+label{
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #5cb95f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: rgb(82, 148, 97);
+}
+
+.resumen{
+    background: #ffffff62;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgb(21, 21, 21, 0.1);
+    width: 500px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
