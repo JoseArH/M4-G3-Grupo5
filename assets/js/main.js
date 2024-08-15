@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${nuevaEmpresa.getIdEmpresa()}</td>
             <td>${nuevaEmpresa.getNombre()}</td>
             <td>${nuevaEmpresa.getRut()}</td>
+            <td>${nuevaEmpresa.getRubro()}</td>
+            <td>${nuevaEmpresa.getTamano()}</td>
+
         `;
         tablaEmpresas.appendChild(row);
 

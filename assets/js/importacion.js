@@ -1,11 +1,16 @@
 export class Importacion {
-    constructor(idImportacion, producto, numeroProductos, precioUnitario) {
+    constructor(idEmpresa, idImportacion, producto, numeroProductos, precioUnitario) {
+        this.idEmpresa = idEmpresa;
         this.idImportacion = idImportacion;
         this.producto = producto;
         this.numeroProductos = numeroProductos;
         this.precioUnitario = precioUnitario;
     }
 
+    getIdEmpresa() {
+        return this.idEmpresa;
+    }
+    
     getIdImportacion() {
         return this.idImportacion;
     }

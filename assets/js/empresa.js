@@ -1,8 +1,10 @@
 export class Empresa {
-    constructor(idEmpresa, nombre, rut) {
+    constructor(idEmpresa, nombre, rut,rubro,tamano) {
         this.idEmpresa = idEmpresa;
         this.nombre = nombre;
         this.rut = rut;
+        this.rubro;
+        this.tamano;
         this.importaciones = [];
     }
 
@@ -16,6 +18,14 @@ export class Empresa {
 
     getRut() {
         return this.rut;
+    }
+
+    getRubro(){
+        return this.rubro;
+    }
+
+    getTamano(){
+        return this.tamano;
     }
 
     agregarImportacion(importacion) {
