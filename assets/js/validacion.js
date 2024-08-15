@@ -1,5 +1,3 @@
-export './main.js';
-
 // Validación del idEmpresa (solo números)
 function validarIdEmpresa(idEmpresa) {
     var regexRUT = /^\d+$/;
@@ -17,24 +15,27 @@ function validarRutEmpresa(rut) {
     var regexRUT = /^\d+$/;
     return regexRUT.test(rut);
 }
-// Validación del idImportación (solo números)
-function validarIdEmpresa(idProducto) {
+
+// Validación del idProducto (solo números)
+function validarIdProducto(idProducto) {
     var regexRUT = /^\d+$/;
     return regexRUT.test(idProducto);
 }
+
 // Validación del nombre del Producto (solo letras y espacios)
 function validarProducto(nombreProducto) {
     var regexNombre = /^[a-zA-Z\s]+$/;
     return regexNombre.test(nombreProducto);
 }
-// Validación del número del producto(solo números)
+
+// Validación del número del producto (solo números)
 function validarNumeroProducto(numeroProducto) {
     var regexRUT = /^\d+$/;
     return regexRUT.test(numeroProducto);
 }
-// Validación del precio del producto(solo números)
+
+// Validación del precio del producto (solo números)
 function validarPrecioProducto(precioProducto) {
     var regexRUT = /^\d+$/;
     return regexRUT.test(precioProducto);
 }
-    
