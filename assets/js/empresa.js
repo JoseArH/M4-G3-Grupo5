@@ -3,8 +3,8 @@ export class Empresa {
         this.idEmpresa = idEmpresa;
         this.nombre = nombre;
         this.rut = rut;
-        this.rubro;
-        this.tamano;
+        this.rubro = rubro;
+        this.tamano = tamano;
         this.importaciones = [];
     }
 

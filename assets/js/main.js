@@ -1,6 +1,6 @@
 import { Empresa } from './empresa.js';
-import { Importacion } from './importacion.js';
-import './validacion.js';
+import {Importacion} from './importacion.js';
+import { validarIdEmpresa, validarnombreEmpresa, validarRutEmpresa, validarIdProducto, validarProducto, validarNumeroProducto, validarPrecioProducto } from './validacion.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const empresaForm = document.querySelector('#empresaForm');
@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const tablaEmpresas = document.querySelector('#tablaEmpresas');
     const tablaImportaciones = document.querySelector('#tablaImportaciones');
     const empresaSelect = document.querySelector('#empresaSelect');
+    const rubroImportacion = document.getElementById('rubroImportacion');
+    const tamanoEmpresa = document.getElementById('tamanioEmpresa');
 
     const empresas = [];
 
@@ -17,11 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const idEmpresa = empresaForm.idEmpresa.value;
         const nombreEmpresa = empresaForm.nombreEmpresa.value;
         const rutEmpresa = empresaForm.rutEmpresa.value;
+        const rubro = rubroImportacion.value;
+        const tamano = tamanoEmpresa.value;
 
-        const nuevaEmpresa = new Empresa(idEmpresa, nombreEmpresa, rutEmpresa);
+        if (!validarIdEmpresa(idEmpresa)) {
+            alert('El ID de la empresa debe contener solo números.');
+            return;
+        }
+
+        const nuevaEmpresa = new Empresa(idEmpresa, nombreEmpresa, rutEmpresa, rubro, tamano);
         empresas.push(nuevaEmpresa);
-
-        // Agregar la nueva empresa a la tabla de empresas
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${nuevaEmpresa.getIdEmpresa()}</td>
@@ -29,11 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <td>${nuevaEmpresa.getRut()}</td>
             <td>${nuevaEmpresa.getRubro()}</td>
             <td>${nuevaEmpresa.getTamano()}</td>
-
         `;
         tablaEmpresas.appendChild(row);
 
-        // Agregar la nueva empresa al select de importaciones
         const option = document.createElement('option');
         option.value = nuevaEmpresa.getIdEmpresa();
         option.text = `${nuevaEmpresa.getNombre()} (ID: ${nuevaEmpresa.getIdEmpresa()})`;
