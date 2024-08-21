@@ -78,6 +78,7 @@ button:hover {
 }
 
 table{
+    text-align: center;
     padding-top: 15px;
     width: 100%;
     border-collapse: collapse;

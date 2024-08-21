@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const idImportacion = importacionForm.idImportacion.value;
+        console.log(idImportacion);
         const producto = importacionForm.producto.value;
         const numeroProductos = parseInt(importacionForm.numeroProductos.value);
         const precioUnitario = parseInt(importacionForm.precioUnitario.value);
 
         const nuevaImportacion = new Importacion(idImportacion, producto, numeroProductos, precioUnitario);
         empresaSeleccionada.agregarImportacion(nuevaImportacion);
-
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${nuevaImportacion.getIdImportacion()}</td>

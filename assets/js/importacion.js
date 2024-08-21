@@ -1,14 +1,9 @@
 export class Importacion {
-    constructor(idEmpresa, idImportacion, producto, numeroProductos, precioUnitario) {
-        this.idEmpresa = idEmpresa;
+    constructor(idImportacion, producto, numeroProductos, precioUnitario) {
         this.idImportacion = idImportacion;
         this.producto = producto;
         this.numeroProductos = numeroProductos;
         this.precioUnitario = precioUnitario;
-    }
-
-    getIdEmpresa() {
-        return this.idEmpresa;
     }
     
     getIdImportacion() {
@@ -28,6 +23,7 @@ export class Importacion {
     }
 
     calcularTotal() {
-        return this.numeroProductos * this.precioUnitario;
+
+        return parseInt(this.numeroProductos) * parseInt(this.precioUnitario);
     }
 }
